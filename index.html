@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo h1 {
+            font-size: 2.5rem;
+            color: #1877f2;
+            margin-bottom: 5px;
+        }
+
+        .logo p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #1468c5;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .forgot-password a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .create-account {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .create-account a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        .create-account a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>facebook</h1>
+            <p>Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</p>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="email">Correo electrónico o número de teléfono</label>
+                <input type="text" id="email" name="email" placeholder="Correo electrónico o número de teléfono">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña">
+            </div>
+            <button type="submit">Iniciar sesión</button>
+            <div class="forgot-password">
+                <a href="#">¿Has olvidado la contraseña?</a>
+            </div>
+            <button type="button" style="background-color: #4CAF50;">Crear cuenta nueva</button>
+            <div class="create-account">
+                <p>Crea una página para un famoso, una marca o una empresa.</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function comprobarCampoVacio(campo) {
+  if (campo.value.trim() === "") {
+    alert("Por favor, completa el campo.");
+    return false;
+  } else {
+    return true;
+  }
+}
+
+// Ejemplo de uso:
+const campoNombre = document.getElementById("nombre");
+
+if (comprobarCampoVacio(campoNombre)) {
+  // El campo está lleno, puedes procesar el formulario o hacer algo más.
+  console.log("El campo está lleno.");
+}
+</script>
